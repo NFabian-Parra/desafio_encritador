@@ -1,0 +1,226 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --inter-font: "Inter", sans-serif;
+  --main-bg-color: #F3F5FC;
+  --dark-blue: #0A3871;
+  --Gray-txt-400: #495057;
+  --Gray-txt-500: #343A40;
+  --white: white;  
+}
+
+body{
+  background: var(--main-bg-color);
+  font-family: var(--inter-font);
+  display: flex;
+  padding: 3dvh;
+  height: 100dvh;
+  width:100%;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.titulo-sitio {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  margin: 2rem 0;
+}
+
+.form__section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  margin: 0 2.6rem 1.3rem 15%;
+  gap: 2rem;
+}
+
+.form__imput{ 
+  background: transparent;
+  border-color: transparent;
+  outline: none;
+  height: 64dvh;
+  color: var(--dark-blue);
+  font-family: var(--inter-font);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+textarea::placeholder{
+  color: var(--Dark-blue);
+}
+
+.form__signo{
+  color: var(--Gray-txt-400);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.imput__btn_section{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.imput__btn{
+  flex: 1; 
+  padding: 1.5rem;
+  background: transparent;
+  border-radius: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid var(--dark-blue); 
+}
+
+#btn_encriptar{
+  background: var(--dark-blue);
+  color: var(--white);
+}
+#btn_decencriptar{
+  background: #D8DFE8;
+  color: var(--dark-blue);
+}
+
+.output{
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  justify-content: space-between;
+  border-radius: 2rem;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  padding: 1.3rem;
+  max-width: 23.8rem;
+  gap: 1.5rem;
+}
+.output__msj{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+  flex-grow: 1;
+  justify-content: center; /* quitar cuando js*/ 
+  min-width: 335px;
+  color: var(--Gray-txt-400);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 2.25rem */
+}
+
+.output__info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  }
+
+.output_title{
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  color: var(--Gray-txt-500);
+}
+.output__text{
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--Gray-txt-400);
+}
+
+.btn_container_copiar{
+  display: none;
+  margin-top: 2rem;
+}
+
+.btn__copiar{
+  color: var(--dark-blue);
+}
+
+.msj__copiar {
+  font-size: 0.875rem;
+  color: var(--dark-blue);
+  margin-left: 1rem;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.msj__copiar.mostrar {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px){
+  body{
+    flex-direction: column;
+    padding: 6dvh 3dvh 3dvh;
+    height: 100dvh;
+  }
+  .logo_alura{
+    content: url(./img/logo_alura_mini.png);
+  }
+
+  .form__section{
+    margin: 0rem 0 2rem 0;
+  }
+
+  .form__imput{
+    height: 48.6dvh;
+  }
+
+  .output{
+    flex-direction: column;
+    max-width: none;
+    gap: 0;
+  }
+
+  .fisgon{
+    display: none;
+  }
+
+  .output__msj{
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 460px){
+  body {
+    padding: 2.4dvh;
+  }
+
+  .form__section{
+    margin-bottom: 2rem ;
+  }
+
+  .form__imput{
+    height: 17.5rem;
+  }
+
+  .imput__btn_section {
+  flex-direction: column;
+  }
+
+  .output{
+    padding: 2rem;
+    margin-bottom: 1.8rem;
+    height: auto;
+  }
+}
+

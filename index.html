@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+  <title>Encriptador de Texto</title>
+</head>
+<body>
+  <main>
+    <header>
+      <img class="logo_alura" src="./img/logo_alura.png" alt="Logo de Alura">
+    </header>
+    <h1 class="titulo-sitio">Desafio encriptador de texto</h1>
+    <form class="form__section">
+      <textarea class="form__imput" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+      <div class="form__btn__container">
+        <div class="form__signo"><img src="./img/signo.png" alt="icono alerta">
+          <span>Solo letras minúsculas y sin acentos</span>
+        </div>
+        <div class="imput__btn_section">
+          <input class="imput__btn" id="btn_encriptar" type="button" value="Encriptar">
+          <input class="imput__btn" id="btn_decencriptar" type="button" value="Dencriptar">
+        </div>
+      </div>
+    </form>
+  </main>
+  <aside class="output">
+    <div class="output__msj">
+      <img class="fisgon" src="./img/muneco.png" alt="Imagen de un fisgon" class="output__img">
+      <div class="output__info">
+        <h3 class="output_title">Ningún mensaje fue encontrado</h3>
+        <p class="output__text">Ingresa el texto que desees encriptar o desencriptar</p>
+      </div>
+    </div>
+    <div class="btn_container_copiar">
+      <input class="imput__btn btn__copiar" type="button" value="Copiar">
+      <span class="msj__copiar" style="display: none;">Texto copiado!</span>
+    </div>
+  </aside>
+  
+  <script src="script.js"></script>
+</body>
+</html>
